@@ -1,6 +1,6 @@
 # Gerenciador de tarefas em Java Swing
 
-[![CI](https://github.com/Darkramuza/gerenciador-tarefas-java/actions/workflows/ci.yml/badge.svg)](https://github.com/Darkramuza/gerenciador-tarefas-java/actions/workflows/ci.yml)
+[![CI](https://github.com/r-menegueli/gerenciador-tarefas-java/actions/workflows/ci.yml/badge.svg)](https://github.com/r-menegueli/gerenciador-tarefas-java/actions/workflows/ci.yml)
 ![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)
 ![Swing](https://img.shields.io/badge/interface-Swing-007396)
 
@@ -33,8 +33,8 @@ Requer JDK 17 ou superior.
 
 ```bash
 mkdir -p build
-javac -encoding UTF-8 -d build src/main/java/br/com/darkramuza/tarefas/*.java
-java -cp build br.com.darkramuza.tarefas.Aplicacao
+javac -encoding UTF-8 -d build src/main/java/io/github/rmenegueli/tarefas/*.java
+java -cp build io.github.rmenegueli.tarefas.Aplicacao
 ```
 
 No Windows, crie a pasta `build` antes de executar os mesmos comandos. Os dados são gravados em `.gerenciador-tarefas/tarefas.tsv` dentro da pasta do usuário.
@@ -43,9 +43,9 @@ No Windows, crie a pasta `build` antes de executar os mesmos comandos. Os dados 
 
 ```bash
 javac -encoding UTF-8 -Xlint:all -Werror -d build \
-  src/main/java/br/com/darkramuza/tarefas/*.java \
-  src/test/java/br/com/darkramuza/tarefas/*.java
-java -cp build br.com.darkramuza.tarefas.RepositorioTarefasTeste
+  src/main/java/io/github/rmenegueli/tarefas/*.java \
+  src/test/java/io/github/rmenegueli/tarefas/*.java
+java -cp build io.github.rmenegueli.tarefas.RepositorioTarefasTeste
 ```
 
 A integração contínua repete essa compilação rigorosa e o teste de persistência em cada alteração.

@@ -1,4 +1,4 @@
-package br.com.darkramuza.tarefas;
+package io.github.rmenegueli.tarefas;
 
 import java.util.Objects;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package br.com.darkramuza.tarefas;
+package io.github.rmenegueli.tarefas;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

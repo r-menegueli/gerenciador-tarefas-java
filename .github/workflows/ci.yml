@@ -27,4 +27,4 @@ jobs:
             $(find src/main/java src/test/java -name '*.java' -print)
 
       - name: Testar persistência
-        run: java -cp build br.com.darkramuza.tarefas.RepositorioTarefasTeste
+        run: java -cp build io.github.rmenegueli.tarefas.RepositorioTarefasTeste
