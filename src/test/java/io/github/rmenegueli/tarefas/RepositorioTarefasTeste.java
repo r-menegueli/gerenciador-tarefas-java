@@ -20,10 +20,18 @@ public final class RepositorioTarefasTeste {
             repositorio.salvar(List.of(primeira, segunda));
             List<Tarefa> carregadas = repositorio.carregar();
 
-            assert carregadas.size() == 2;
-            assert carregadas.get(0).getTitulo().equals("Revisar; relatório");
-            assert carregadas.get(0).isConcluida();
-            assert carregadas.get(1).getPrioridade() == Prioridade.MEDIA;
+            if (carregadas.size() != 2) {
+                throw new AssertionError("A quantidade de tarefas restauradas deveria ser 2.");
+            }
+            if (!carregadas.get(0).getTitulo().equals("Revisar; relatório")) {
+                throw new AssertionError("O título com caracteres especiais não foi restaurado.");
+            }
+            if (!carregadas.get(0).isConcluida()) {
+                throw new AssertionError("O estado de conclusão não foi restaurado.");
+            }
+            if (carregadas.get(1).getPrioridade() != Prioridade.MEDIA) {
+                throw new AssertionError("A prioridade da segunda tarefa não foi restaurada.");
+            }
             System.out.println("Teste de persistência aprovado.");
         } finally {
             Files.deleteIfExists(arquivo);
